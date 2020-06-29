@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    min-height: 100vh;
+    grid-gap: 1rem;
+}
+.img-container{
+
+}
+.img-container img {
+width: 400px;
+height: 800px;
+object-fit: cover;
+}
+.img-container img:hover {
+    transform: scale(1.2);
+}
