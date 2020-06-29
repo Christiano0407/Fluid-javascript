@@ -14,8 +14,8 @@
 overflow: hidden;
 }
 .img-container img {
-width: 400px;
-height: 800px;
+width: 500px;
+height: 600px;
 object-fit: cover;
 transition: all 0.3s ease-out;
 cursor: pointer
@@ -31,6 +31,13 @@ cursor: pointer
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+}
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
 }
 .modal p {
     color: #fff;
@@ -39,4 +46,15 @@ cursor: pointer
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -5%);
+}
+.fluid-img {
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+}
+.fluid-img.open {
+    transform: translate(-50%, -50%) scale(1);
 }
